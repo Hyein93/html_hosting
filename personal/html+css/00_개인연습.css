@@ -122,3 +122,55 @@ h3 {
     font-size: 15px;
     font-weight: normal;
 }
+/* 움직이는 글자를 파헤쳐... */
+  /* overflow: hidden; 속성은 부모 요소의 내부에서 발생하는 콘텐츠의 오버플로우(overflow)를 숨기는 속성입니다. 이를 사용하면 부모 요소의 크기가 고정되며,
+  자식 요소가 부모 요소의 크기를 벗어나더라도 숨겨진 상태로 존재하게 된다.
+
+  따라서, overflow: hidden; 속성을 부모 요소에 적용하면, 자식 요소가 부모 요소의 크기를 벗어날 경우 해당 부분을 숨길 수 있다. 이렇게 함으로써 자식 요소가 부모 요소의 흐름을 벗어나지 않고, 부모 요소 내부에 포함되도록 할 수 있다.
+
+  이러한 동작 방식 때문에 overflow: hidden; 속성은 부모 요소가 자식 요소의 크기를 포함하도록 강제하는 효과가 있다. 따라서, 부모 요소의 크기가 자식 요소의 크기에 의해 자동으로 조정되며, 부모 요소가 자식 요소를 포함하는 것이 가능해진다.
+  position:relative: 부모 태그 기준으로 위치 지정
+  animation:marquee - 흐르는 옵션! 
+  10s linear - 속도 
+  infinite - 무한 반복
+ */
+ .marquee {
+  height:128px;width:100%;overflow:hidden;position:relative
+  }
+/* 움직임 옵션 */
+.marquee div {
+  display:block;width:200%;height:128px;position:absolute;overflow:hidden;animation:marquee 15s linear infinite
+  }
+/* 텍스트 옵션 */
+.marquee span {
+  float:left;width:50%;font-size:50px;font-weight:bold; display:flex;
+  /* 그라데이션 글자 표현 */
+  background: #afafaf; /* 그라데이션 진행 안될시 보일 색상 */
+  background: linear-gradient(to right,#c1eec1, #cfb5ff);
+  background-clip: text;
+  /* border-box, padding-box, content-box, text 4가지
+  border-box
+  외곽선의 비어 있는 부분까지 배경을 칠한다. (기본값)
+  padding-box
+  외곽선 부분은 칠하지 않지만 안쪽 여백까지는 배경을 칠한다.
+  content-box
+  안쪽 여백 부분도 칠하지 않고 오로지 내용이 들어갈 부분만 배경을 칠한다.
+  text
+  텍스트를 따라서 배경을 칠한다.
+   */
+  color: transparent; white-space:nowrap
+  }
+
+  @keyframes marquee {
+    0%{left:0}
+    100%{left:-100%}
+}
+/* 메인 텍스트 위치*/
+.main_marquee_txt {
+  width: 100%;
+  height: 140px;
+  margin: 20px auto 0;
+  position: relative;
+  overflow: hidden;
+}
+
