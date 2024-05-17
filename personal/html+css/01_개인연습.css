@@ -1,0 +1,11 @@
+@charset "utf-8";
+.section{
+    box-sizing: border-box;
+    padding: 30px;
+
+}
+.main-copy {
+    color: palevioletred;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 14pt;
+}
