@@ -1,0 +1,35 @@
+@charset "utf-8";
+
+.container1 {
+    width: 1200px;
+    margin: 0 auto;
+}
+.container1 div {
+    height: 200px;
+    font-family:"Noto Sans KR", sans-serif; 
+    font-size: 12pt; font-weight: 600;
+}
+.section1 {
+    background: 
+    lightcyan;
+    color:
+    navy;
+}
+.section2 {
+    background: 
+    lightgoldenrodyellow;
+    color: 
+    goldenrod;
+}
+.section3 {
+    background: 
+    lightgray;
+    color: 
+    grey;
+}
+.section4 {
+    background: 
+    lightpink;
+    color: 
+    hotpink;
+}

@@ -1,0 +1,37 @@
+@charset "utf-8";
+
+.container3 {
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+}
+.contents {
+    width: 1000px;
+    height: 800px;
+    background: white;
+}
+.header {
+    background: 
+    lightcyan;
+    width: 200px;
+}
+.section1 {
+    background: 
+    lightgoldenrodyellow;
+    height: 200px;
+}
+.section2 {
+    background: 
+    lightgray;
+    height: 200px;
+}
+.section3 {
+    background: 
+    lightsalmon;
+    height: 200px;
+}
+.footer {
+    background: 
+    lightpink;
+    height: 200px;
+}
