@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url(reset.css);
+        @import url(typo.css);
+
+        header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 1920px;
+            margin: 0 auto;
+            height: 80px;
+            border: 1px solid;
+        }
+
+        .gnb {
+            width: 1200px;
+            margin: auto;
+            border: 1px solid red;
+        }
+
+        /* 1depth */
+        .main {
+            display: flex;
+            width: 820px;
+            margin: auto;
+            align-items: center;
+            justify-content: space-between;
+            border: 1px solid red;
+        }
+
+        .main>li {
+            height: 80px;
+            text-align: center;
+            line-height: 80px;
+        }
+
+        .main>li:hover {
+            color: #000;
+            font-weight: bold;
+        }
+
+        /* 2depth */
+        .sub {
+            height: 0;
+            overflow: hidden;
+            visibility: hidden;
+            opacity: 0;
+            background: rgba(0, 0, 0, .5);
+            /* 숫자가 작을 수록 빠르다. */
+            transition: .3s;
+            line-height: 2;
+        }
+
+        .main>li:hover .sub {
+            height: 150px;
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .sub li:hover {
+            background: #111;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="gnb">
+            <!-- 1depth -->
+            <ul class="main">
+                <li>
+                    <a href="#">나의예약</a>
+                </li>
+                <li>
+                    <a href="#">프로모션/제휴</a>
+                </li>
+                <li>
+                    <a href="#">부가서비스</a>
+                </li>
+                <li>
+                    <a href="#">운항정보</a>
+                </li>
+                <li>
+                    <a href="#">전체메뉴</a>
+                    <!-- 2depth -->
+                    <ul class="sub">
+                        <li><a href="#">서브메뉴1</a></li>
+                        <li><a href="#">서브메뉴2</a></li>
+                        <li><a href="#">서브메뉴3</a></li>
+                        <li><a href="#">서브메뉴4</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+</body>
+
+</html>
